@@ -1,0 +1,23 @@
+#Guess the number game
+
+import random
+randomnr = random.randint(1, 20)
+print("I am thinking of a number between 1 and 20.")
+print("You have 5 tries to guess.")
+
+#The player has 5 attempts to guess.
+for guessAmount in range (1, 6):
+    print("Take a guess.")
+    guess = int(input())
+
+    if guess < randomnr:
+        print("My number is higher.")
+    elif guess > randomnr:
+        print("My number is lower")
+    else:
+        break
+
+if guess == randomnr:
+    print(f"\nCongrats, you guessed my number in {guessAmount} tries.")
+else:
+    print(f"\nYou have lost!\nThe number i was thinking of was {randomnr}")
